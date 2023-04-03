@@ -1,0 +1,100 @@
+﻿<Window x:Class="shoppinglinq.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:shoppinglinq"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"></ColumnDefinition>
+            <ColumnDefinition Width="199*"></ColumnDefinition>
+            <ColumnDefinition Width="860*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"></RowDefinition>
+            <RowDefinition Height="280*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Background="DeepPink"></Grid>
+        <Grid Grid.Row="0" Grid.Column="1"  Background="Honeydew"></Grid>
+        <!--<Border Grid.Row="0" Grid.Column="1" BorderBrush="HotPink" BorderThickness="0,0,3,0" Grid.ColumnSpan="2" Margin="0,0,857,0"/>-->
+        <!--<Image Source="C:\Users\rubhi\Downloads\fa9.png" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,727,0"></Image>-->
+        <!--<TextBlock  Grid.Column="1" Background="LightPink"></TextBlock>-->
+        <Image Source="C:\Users\rubhi\Downloads\fa2.jpeg" Grid.Column="2" Margin="14,12,476,550" RenderTransformOrigin="0.455,0.627" Grid.RowSpan="2"/>
+        <TextBlock Text="Fashion Corner"  Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="HotPink" FontFamily="Cambria" FontWeight="DemiBold" FontSize="38" FontStyle="Italic" Margin="242,21,0,0" Height="45" Width="259"></TextBlock>
+        <Grid Grid.Row="1" Grid.Column="1" Margin="0,0,0,0" Background="Honeydew">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="FILTERS" FontSize="25" FontFamily="times new roman"  HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="0" Text="Category" Foreground="DeepPink" FontSize="24" FontFamily="times new roman" Margin="20,0,0,0"  HorizontalAlignment="Left" VerticalAlignment="Bottom"></TextBlock>
+            <StackPanel Grid.Row="1"  Margin="40,8,0,0" >
+                <RadioButton x:Name="rb1" Content="Kurtis" Checked="rb1_Checked" ></RadioButton>
+                <RadioButton x:Name="rb2" Content="Salwar Suits" Checked="rb1_Checked" ></RadioButton>
+                <RadioButton x:Name="rb3" Content="Sarees" Checked="rb1_Checked"  ></RadioButton>
+                <RadioButton x:Name="rb4" Content="Ethnic Gowns" Checked="rb1_Checked" ></RadioButton>
+            </StackPanel>
+            <TextBlock Grid.Row="2" Text="Brands" Foreground="DeepPink" FontSize="24" FontFamily="times new roman" Margin="20,10,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+            <StackPanel Grid.Row="2" Grid.RowSpan="3"  Margin="40,48,0,0" >
+                <RadioButton x:Name="rbb1" Content="Avessa" Checked="rbb1_Checked"></RadioButton>
+                <RadioButton x:Name="rbb2" Content="BIBA" Checked="rbb1_Checked"></RadioButton>
+                <RadioButton x:Name="rbb3" Content="Max" Checked="rbb1_Checked"></RadioButton>
+                <RadioButton x:Name="rbb4" Content="Kayra" Checked="rbb1_Checked"></RadioButton>
+            </StackPanel>
+            <TextBlock Grid.Row="3" Text="Size" Foreground="DeepPink" FontSize="24" FontFamily="times new roman" Margin="20,45,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+            <StackPanel Grid.Row="3" Grid.RowSpan="4"  Margin="40,78,0,0" >
+                <RadioButton x:Name="rbs1" Content="Small" Checked="rbs1_Checked"></RadioButton>
+                <RadioButton x:Name="rbs2" Content="Medium" Checked="rbs1_Checked"></RadioButton>
+                <RadioButton x:Name="rbs3" Content="Large" Checked="rbs1_Checked"></RadioButton>
+                <RadioButton x:Name="rbs4" Content="Extra Large" Checked="rbs1_Checked"></RadioButton>
+            </StackPanel>
+            <TextBlock Grid.Row="4" Grid.RowSpan="5" Foreground="DeepPink" Text="Price" FontSize="24" FontFamily="times new roman" Margin="20,77,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+            <StackPanel Grid.Row="4" Grid.RowSpan="6"  Margin="40,110,0,0" >
+                <RadioButton x:Name="rbp1" Content="Low to High" Margin="0,0,0,4" Checked="rbp1_Checked"></RadioButton>
+                <RadioButton x:Name="rbp2" Content="High to Low" Checked="rbp2_Checked"></RadioButton>
+            </StackPanel>
+            <TextBlock Grid.Row="5" Grid.RowSpan="5" Foreground="DeepPink" Text="Pay on Delivery" FontSize="24" FontFamily="times new roman" Margin="20,83,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+            <CheckBox Content="Eligible for COD" Grid.Row="6" x:Name="chck" VerticalAlignment="Center" Checked="CheckBox_Checked"  Margin="40,45,0,0" ></CheckBox>
+            <!--<TextBlock Grid.Row="6" Grid.RowSpan="7" Text="Reviews" Foreground="DeepPink" FontSize="24" FontFamily="times new roman" Margin="20,55,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+            <StackPanel Grid.Row="6" Grid.RowSpan="4"  Margin="40,78,0,0" >
+                <RadioButton x:Name="rb41" Content="⭐⭐⭐⭐⭐"></RadioButton>
+                <RadioButton x:Name="rb42" Content="⭐⭐⭐⭐⭐"></RadioButton>
+                <RadioButton x:Name="rb43" Content="⭐⭐⭐⭐⭐"></RadioButton>
+            </StackPanel>-->
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="1" Background="Pink">
+            <!--<Border CornerRadius="15" BorderThickness="3,3,0,0" Background="LightPink"></Border>-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,0">
+                <TextBlock Text="Search For" FontSize="22" ></TextBlock>
+                <TextBox x:Name="txts" Height="30" Width="210" Margin="20,0,0,0" VerticalAlignment="Top" BorderThickness="2"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  Margin="200,80,0,0">
+                <TextBlock Text="Price Range Between" FontSize="22" ></TextBlock>
+                <TextBox x:Name="txtp" Height="30" Width="80" Margin="20,0,0,0" VerticalAlignment="Top" BorderThickness="2"></TextBox>
+                <TextBlock Text="to" FontSize="22" Margin="20,0,0,0" ></TextBlock>
+                <TextBox x:Name="txtt" Height="30" Width="80" Margin="20,0,0,0" VerticalAlignment="Top" BorderThickness="2"></TextBox>
+                <Button Content="GO" BorderBrush="LightPink" Click="Button_Click" FontSize="18" BorderThickness="6" Margin="40,-500,0,0" Background="Honeydew" Height="40" Width="76"/>
+            </StackPanel>
+            <ListView x:Name="lstview" Width="800" Margin="30,130,30,35">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Item Code" Width="100"  DisplayMemberBinding="{Binding id}"></GridViewColumn>
+                        <GridViewColumn Header="Item Name" Width="200"  DisplayMemberBinding="{Binding name}"></GridViewColumn>
+                        <GridViewColumn Header="Brand Name" Width="140"  DisplayMemberBinding="{Binding brand}"></GridViewColumn>
+                        <GridViewColumn Header="Price" Width="100"  DisplayMemberBinding="{Binding price}"></GridViewColumn>
+                        <GridViewColumn Header="Size" Width="120"  DisplayMemberBinding="{Binding size}"></GridViewColumn>
+                        <GridViewColumn Header="COD Avalibility" Width="120" DisplayMemberBinding="{Binding cod}" ></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
